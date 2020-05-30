@@ -188,7 +188,7 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO
+    // iterates across all candidates votes and updates min when a lower value is found.
     int min;
     for (int i = 0; i < candidate_count; i++)
     {
@@ -204,7 +204,6 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    // TODO
     //loop over each candidate vote.
     int counter = 0;
     int notelm = 0;
@@ -233,7 +232,7 @@ bool is_tie(int min)
 // Eliminate the candidate (or candidiates) in last place
 void eliminate(int min)
 {
-    // TODO
+    // iterates over the candidates and eliminates the lowest scoring candidate.
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == min)
